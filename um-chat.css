@@ -1,0 +1,691 @@
+#avacweb_chat_holder {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_header {
+    background: #d95c5c;
+    font-size: 1.5em;
+    padding: 1em;
+    color: white;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_header > #awc_buttons_wrapper, 
+#avacweb_chat_holder > #avacweb_chat > #awc_header > #awc_title {
+    display: table-cell;
+    vertical-align: middle;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_header > #awc_buttons_wrapper {
+    text-align: right;
+}
+ 
+#avacweb_chat_holder #achat_update {
+    display: none;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_header > #awc_buttons_wrapper .ui.button {
+    margin: 0em -.5px !important;
+    border: none;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_header > #awc_buttons_wrapper span#achat_reading.active.reading:after {
+    content: ': Activado';
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_userlist {
+    width: 200px;
+    height: 400px;
+    overflow: auto;
+    overflow-x: hidden;
+    float: left;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_userlist > h4 {
+    display: block;
+    padding: .95em;
+    text-align: center;
+    background: hsla(0,52%,51%,1);
+    color: white;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_rightbox {
+    position: relative;
+    margin-left: 200px;
+    height: 400px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_rightbox > #awc_tabs_wrapper {
+    height: 3.15em;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_rightbox > #awc_messages {
+    overflow: auto;
+    height: calc(400px - 34px);
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_rightbox #awc_tabs.menu a.item {
+    width: 130px;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_rightbox #awc_tabs.menu a.item > span {
+    width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_footer {
+    display: block;
+    position: relative;
+    padding: 1em 1em;
+}
+ 
+#avacweb_chat_holder > #avacweb_chat > #awc_footer:before {
+    content: 'Mensaje & Opciones';
+    display: block;
+    margin-top: -1em;
+    margin-bottom: 1em;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding: 1em;
+    background: #D95C5C;
+    text-transform: uppercase;
+    color: white;
+}
+ 
+#achat_colors, #achat_smilies, #achat_user_prefs {
+    padding: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: .5em;
+}
+ 
+#achat_user_prefs .achat_user_setting {
+    display: block;
+    width: 250px;
+    padding: .25em 0em;
+}
+ 
+#achat_user_prefs .achat_user_setting > span,
+#achat_user_prefs .achat_user_setting > input {
+    display: inline-block;
+    vertical-align: middle;
+}
+ 
+#achat_user_prefs .achat_user_setting > input {
+    float: right;
+}
+ 
+#achat_smilies #smilies_categ {
+    background: transparent !important;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 2em;
+}
+ 
+#achat_smilies #simple-wrap > p.center {
+    display: none;
+}
+ 
+#achat_colors table {
+    margin: 1em auto;
+}
+ 
+#achat_colors td {
+    padding: 10px;
+    border: 1px solid #f9f9f9;
+}
+ 
+div#awc_contextmenu {
+    width: initial !important;
+    height: initial !important;
+    padding: 0em;
+    padding-right: 1px;
+}
+ 
+.context.menu > i:first-child {
+    padding-top: .75em;
+    padding-right: .75em;
+    font-size: 1.25em;
+}
+ 
+.context.menu span.username {
+    display: block;
+    font-size: 1em;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5)
+}
+ 
+.context.menu span.username:before {
+    content: 'Usuario: ';
+    font-weight: 500;
+}
+ 
+.context.menu span.help {
+    border-left: 3px solid rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.05);
+    display: block;
+    padding: 1em .75em;
+    text-transform: uppercase;
+}
+ 
+.context.menu .forum-action {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+.context.menu .forum-action > a, .context.menu .chat-action,  .context.menu .user-action {
+    padding: 1em;
+    box-sizing: border-box;
+    display: block;
+    color: black;
+    opacity: .8;
+    background: transparent;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+.context.menu .user-action {
+    cursor: pointer;
+}
+.context.menu p.chat-action {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.context.menu .forum-action > a:hover, .context.menu .chat-action:hover, .context.menu .user-action:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.025);
+}
+.context.menu .forum-action > a:before, .context.menu .chat-action:before, .context.menu .user-action:before {
+    content: '';
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: transparent;
+    transition: all .5s ease-in-out;
+}
+.context.menu .chat-action:before {
+    margin: auto;
+}
+.context.menu .forum-action > a:hover:before, .context.menu .user-action:hover:before {
+    width: 100%;
+    background: black;
+}
+.context.menu .chat-action:hover:before {
+    width: 100%;
+    background: #D05858;
+}
+#achat_popup {
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    position: relative;
+    line-height: initial;
+}
+ 
+#achat_popup:before {
+    content: 'Información';
+    font-weight: 500;
+    font-size: 1.5em;
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+ 
+#achat_popup ul {
+    list-style: none;
+    line-height: 1.75em;
+    padding-left: 1em;
+}
+ 
+#achat_popup i {
+    margin-right: 0em;
+}
+ 
+div#awc_userlist {
+    background: #364452;
+}
+ 
+div#awc_userlist ul.online-users > li {
+    background: #3e4f60;
+    padding: 1em;
+    color: #ecf0f1;
+    transition: all .5s ease-in-out;
+}
+ 
+div#awc_userlist ul.online-users > li:hover {
+    background: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+ 
+div#awc_userlist ul.online-users > li > span {
+    color: inherit !important;
+}
+ 
+div#awc_rightbox, div#awc_messages {
+    background: #F9F9F9;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 7.5px;
+    padding: .75em 1em 1em;
+    font-size: 1.15em;
+    margin: 1em;
+    margin-left: 1.5em;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row:before, div#awc_messages .chatbox_row_1.achat_row:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 8px solid #FEFEFE;
+    border-bottom: 5px solid transparent;
+    z-index: 1;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row.my_message {
+    background: rgba(0, 0, 0, 0.025);
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row.my_message:before {
+    border-right: 8px solid #F3F3F3;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row:after {
+    left: -9px;
+    top: 8px;
+    border-top: 7px solid transparent;
+    border-right: 9px solid #D8D8D8;
+    border-bottom: 7px solid transparent;
+    z-index: 0;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row {
+    display: table;
+    clear: both;
+    min-width: 50%;
+    max-width: 90%;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row.my_message {
+    float: right;
+    margin-right: 1.5em;
+    margin-left: 1em;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row.my_message:before, 
+div#awc_messages .chatbox_row_1.achat_row.my_message:after {
+    left: auto;
+    right: -7.5px;
+    border-right: none;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row.my_message:before {
+    border-left: 8px solid #F3F3F3;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row.my_message:after {
+    border-top: 7px solid transparent;
+    border-left: 9px solid #D8D8D8;
+    border-bottom: 7px solid transparent;
+    right: -9px;
+    top: 8px;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row > span.date-and-time, 
+div#awc_messages .chatbox_row_1.achat_row > span.user {
+    font-size: .75em;
+ 
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row > span.date-and-time:after {
+    content: ' ';
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row > span.msg {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: .75em;
+    margin-top: .5em;
+    display: block;
+}
+ 
+/* div#awc_messages .chatbox_row_1.achat_row > span.msg * {
+    font-family: 'Raleway';
+} */
+ 
+#achat_colors {
+    padding: 0em;
+}
+ 
+#achat_colors:before {
+    padding: 1em;
+    content: 'Colores';
+    font-weight: 500;
+    font-size: 1.5em;
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 1em;
+    margin-bottom: .5em;
+}
+ 
+#achat_colors .color-selector {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: none;
+}
+ 
+#achat_colors .color-selector td {
+    padding: initial;
+    border: none;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+}
+ 
+#achat_colors .color-selector td:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background .25s ease-in-out;
+}
+ 
+#achat_colors .color-selector td:hover:before {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+ 
+#achat_colors .color-selector td:after {
+    content: 'Universo Maker';
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: absolute;
+    top: auto;
+    left: 1em;
+    right: auto;
+    bottom: 1em;
+    color: white;
+}
+ 
+#awc_messages > .chatbox_row_1.achat_row.info_row {
+    margin: 1em 0em;
+    display: block;
+    border-radius: initial;
+    border-right: none;
+    padding: 1em calc(4em - 1px);
+}
+ 
+#awc_messages > .chatbox_row_1.achat_row.info_row:before, #awc_messages > .chatbox_row_1.achat_row.info_row:after {
+    content: initial !important;
+}
+ 
+#awc_messages > .chatbox_row_1.achat_row.info_row > span {
+    margin: 0em;
+    font-family: 'Open Sans';
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+ 
+ul.online-users > li.idle {
+    border-left: 3px solid #D95C5C;
+}
+ 
+ul.online-users > li.idle:after {
+    content: 'Estado: Ausente';
+    position: relative;
+    display: block;
+    font-size: .75em;
+    margin: -1.25em;
+    margin-top: .5em;
+    padding: .25em 1.25em;
+    color: whitesmoke;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+ 
+div#awc_messages > .chatbox_row_1.achat_row.global_message {
+    margin: 1em auto;
+    float: none;
+    background: rgba(117, 92, 192, 0.075)
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row.global_message > span.msg {
+    line-height: 1.5em;
+}
+ 
+div#awc_messages > .chatbox_row_1.achat_row.global_message b:first-child {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    padding-bottom: .5em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+}
+ 
+div#awc_messages > .chatbox_row_1.achat_row.global_message:before,
+div#awc_messages > .chatbox_row_1.achat_row.global_message:after {
+    content: initial;
+}
+ 
+div#achat_login {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+}
+ 
+div#achat_login > span {
+    display: block;
+    margin: auto;
+    background: rgba(0, 60, 20, 0.15);
+    padding: 1em;
+    margin: .5em 0em;
+}
+ 
+div#achat_login > .achat_button {
+    margin: 1em;
+    display: inline-block;
+    background: #d95c5c;
+    padding: 1em 3em;
+    text-transform: uppercase;
+    color: whitesmoke;
+    position: relative;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: color .5s ease-in-out, border .4s ease-in-out, background .25s ease-in-out;
+}
+ 
+div#achat_login > .achat_button:hover {
+    background: transparent;
+    border: 3px solid #d95c5c;
+    color: #d95c5c;
+}
+ 
+div#achat_login > .achat_button:active {
+    background: #C34141;
+}
+ 
+div#awc_messages .chatbox_row_1.achat_row img {
+    max-width: 100%;
+    max-height: 300px;
+}
+ 
+/* ATTACHED MESSAGES */
+ 
+div#awc_messages > div.achat_row.attached {
+    border-radius: 0em;
+    margin: 0em;
+    margin-left: 1.5em;
+    max-width: 55%;
+    width: 55%;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+    padding-top: .5em;
+}
+ 
+div#awc_messages > div.achat_row.attached > span.date-and-time, 
+div#awc_messages > div.achat_row.attached > span.user {
+    display: none;
+}
+ 
+div#awc_messages > div.achat_row.attached > span.msg {
+    border-top: none;
+    padding: 0em;
+}
+ 
+div#awc_messages > div.achat_row.attached:before,
+div#awc_messages > div.achat_row.attached:after {
+    content: none;
+}
+ 
+div#awc_messages > div.achat_row.first.attached {
+    margin-top: 1em;
+    border-top-left-radius: 7.5px;
+    border-top-right-radius: 7.5px;
+}
+ 
+div#awc_messages > div.achat_row.last.attached {
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+ 
+}
+ 
+div#awc_messages > div.achat_row.first.attached > span.date-and-time, 
+div#awc_messages > div.achat_row.first.attached > span.user {
+    display: initial;
+}
+ 
+div#awc_messages > div.achat_row.first.attached > span.msg {
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: .75em;
+    margin-top: .75em;
+}
+ 
+div#awc_messages > .achat_row.first.attached:before, div#awc_messages > .achat_row.first.attached:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 8px solid #FEFEFE;
+    border-bottom: 5px solid transparent;
+    z-index: 1;
+}
+ 
+div#awc_messages > .achat_row.first.attached.my_message:before {
+    border-right: 8px solid #F3F3F3;
+}
+ 
+div#awc_messages > .achat_row.first.attached:after {
+    left: -9px;
+    top: 8px;
+    border-top: 7px solid transparent;
+    border-right: 9px solid #D8D8D8;
+    border-bottom: 7px solid transparent;
+    z-index: 0;
+}
+ 
+div#awc_messages > .achat_row.first.attached.my_message:before, 
+div#awc_messages > .achat_row.first.attached.my_message:after {
+    left: auto;
+    right: -7.5px;
+    border-right: none;
+}
+ 
+div#awc_messages > .achat_row.first.attached.my_message:before {
+    border-left: 8px solid #F3F3F3;
+}
+ 
+div#awc_messages > .achat_row.first.attached.my_message:after {
+    border-top: 7px solid transparent;
+    border-left: 9px solid #D8D8D8;
+    border-bottom: 7px solid transparent;
+    right: -9px;
+    top: 8px;
+}
+ 
+/* Avatars */
+ 
+#awc_messages > .achat_row {
+    position: relative;
+} 
+div#awc_messages > div.chatbox_row_1.achat_row:not(.my_message) {
+    margin-left: calc(3.5em + 50px);
+}
+div#awc_messages > div.chatbox_row_1.achat_row.my_message {
+    margin-right: calc(3.5em + 50px);
+}
+#awc_messages > .achat_row > .awc_avatar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px 4px white, 0px 0px 1px 4px rgba(0, 0, 0, 0.75);
+    background-size: cover;
+}
+#awc_messages > .achat_row:not(.my_message) > .awc_avatar {
+    left: calc(-2em - 50px);
+    top: 0em;
+}
+#awc_messages > .achat_row.my_message > .awc_avatar {
+    right: calc(-2em - 50px);
+    top: 0em;
+}
+#awc_messages > .achat_row.attached > .awc_avatar {
+    display: none;
+}
+#awc_messages > .achat_row.first.attached > .awc_avatar {
+    display: initial;
+}
