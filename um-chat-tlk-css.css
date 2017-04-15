@@ -1,0 +1,70 @@
+html.theme--day body header#header {
+    width: 80%;
+    padding: 0em;
+    box-sizing: border-box;
+    margin: 0em;
+}
+html.theme--day body header#header > div.header-bar {
+    margin: 0em;
+    width: 100%;
+    border-radius: 0em;
+    box-shadow: none;
+}
+html.theme--day body aside.aside {
+    width: 20%;
+    right: 0%;
+    top: 0;
+    left: initial;
+    padding-top: 10px;
+    margin-left: 0em;
+    padding: 1em;
+}
+html.theme--day body div#chat {
+    height: auto;
+    padding: 0em;
+    margin: 0em;
+    width: 80%;
+    box-sizing: border-box;
+    padding-top: 60px;
+    position: relative;
+    margin-top: 2em;
+}
+html.theme--day body div#chat section#live {
+    height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0em 2.5em 0em 7.5em;
+    margin: 1em 0em;
+    margin-top: .5em;
+    margin-bottom: 0em;
+    padding-top: 1em;
+}
+html.theme--day body footer.footer {
+    min-height: 130px;
+}
+html.theme--day body footer.footer .footer-wrapper {
+    width: 620px;
+    margin: auto;
+    padding: 1em 0em;
+}
+html.theme--day body a.header-avatar {
+    -webkit-filter: grayscale(1);
+}
+html.theme--day p.join-hint, html.theme--day span.join-hl {
+    color:transparent;
+    font-size: 0px;
+}
+html.theme--day span.join-hl:after {
+    content: "Bienvenido, únete:";
+    color: black;
+    display: inline-block;
+    font-size: 18px;
+}
+
+html.theme--day p.join-hint:after {
+    content: "Si decides usar twitter sólo lo usaremos para recoger tu avatar y enlazar tu perfil, nada más.";
+    color: gray;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 5px;
+}
